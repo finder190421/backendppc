@@ -16,11 +16,7 @@ import syncModels from './src/database/syncModels.js';
 dotenv.config();
 
 const app = express();
-app.use(cors({
-  origin: 'https://ppc-roan.vercel.app', // URL de tu frontend
-  methods: ['POST', 'GET', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'x-token', 'Authorization']
-}));
+app.use(cors());
 
 
 
