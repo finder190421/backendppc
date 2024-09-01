@@ -17,9 +17,9 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin: ['https://ppc-roan.vercel.app/','https://ppc-roan.vercel.app'], // Ajusta esto según el puerto del frontend
+  origin: 'https://ppc-roan.vercel.app', // URL de tu frontend
   methods: ['POST', 'GET', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'x-token','Authorization']
+  allowedHeaders: ['Content-Type', 'x-token', 'Authorization']
 }));
 
 
