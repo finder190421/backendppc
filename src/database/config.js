@@ -1,7 +1,7 @@
 // dbConnection.js
 import { Sequelize } from 'sequelize';
 import dotenv from 'dotenv';
-
+import tedious from 'tedious';
 // Cargar variables de entorno
 dotenv.config();
 
@@ -10,6 +10,7 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
     host: process.env.DB_HOST,
     timezone: 'America/Lima',
     dialect: 'mssql',
+    dialectModule: tedious,  
     dialectOptions: {
         options: {
             encrypt: false,
